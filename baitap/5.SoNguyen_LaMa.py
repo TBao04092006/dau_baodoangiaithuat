@@ -1,4 +1,4 @@
-#Chuyển đổi số la mã sang số nguyên 
+#Chuyển đổi số nguyên sang số la mã
 def chuyenDoiSo(nums: int)->str:
     val = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
     ki_hieu = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"]
