@@ -1,13 +1,15 @@
-def SoDoiXung(x:int) -> bool:
-    if x < 0 or (x % 10 == 0 and x != 0):
-        return False
-    dao_nguoc = 0
-    while x > dao_nguoc:
-        nums = x % 10
-        dao_nguoc = dao_nguoc*10 + nums
-        x //=10
-    return x == dao_nguoc or x == dao_nguoc // 10
-print(SoDoiXung(121))            
-print(SoDoiXung(-121))     
-print(SoDoiXung(10))     
-print(SoDoiXung(0))     
+def isPalindrome(x):
+        # Nếu x âm hoặc x kết thúc bằng 0 (nhưng không phải là 0), không phải số đối xứng
+        if x < 0 or (x % 10 == 0 and x != 0):
+            return False
+
+        reversed_half = 0
+        while x > reversed_half:
+            reversed_half = reversed_half * 10 + x % 10
+            x //= 10
+
+        return x == reversed_half or x == reversed_half // 10
+print(isPalindrome(121))            
+print(isPalindrome(-121))     
+print(isPalindrome(10))     
+print(isPalindrome(0))     
