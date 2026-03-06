@@ -1,0 +1,20 @@
+def mySqrt(self, x):
+        if x < 2:
+            return x
+        
+        left, right = 2, x // 2
+        
+        while left <= right:
+            mid = left + (right - left) // 2
+            num = mid * mid
+            
+            if num > x:
+                right = mid - 1
+            elif num < x:
+                left = mid + 1
+            else:
+                return mid
+        
+        # Trả về right vì khi kết thúc vòng lặp, 
+        # right là số nguyên lớn nhất mà right * right <= x
+        return right
