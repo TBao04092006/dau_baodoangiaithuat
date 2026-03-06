@@ -1,9 +1,12 @@
-def twoSum(nums, target):
-    n = len(nums)
-    for i in range(n):
-         for j in range(i + 1, n):
-            if nums[i] + nums[j] == target:
+def twoSum(self, nums, target):
+    index_of = {}
+    for i in range(len(nums)):
+        value = nums[i]
+        index_of[value] = i
+    for i in range(len(nums)):
+        value = nums[i]
+        value2 = target - value
+        if value2 in index_of:
+            j = index_of[value2]    
+            if i != j:
                 return [i, j]
-nums=[2, 7, 11, 15]     
-target=9
-print("Ket qua: ", twoSum(nums, target))                   
